@@ -1,0 +1,22 @@
+{
+  "author": "Maciej Małecki <maciej.malecki@notimplemented.org>",
+  "name": "ws-proxy",
+  "description": "WebSocket proxy using super fast `ws` module",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mmalecki/node-ws-proxy.git"
+  },
+  "main": "./lib/ws-proxy",
+  "bin": {
+    "ws-proxy": "./bin/ws-proxy"
+  },
+  "engines": {
+    "node": ">= 0.4"
+  },
+  "dependencies": {
+    "ws": "0.3.x",
+    "optimist": "0.3.x"
+  },
+  "devDependencies": {}
+}
