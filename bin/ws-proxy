@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var argv = require('optimist').argv,
+    WSProxy = require('../lib/ws-proxy').WSProxy;
+
+var w = new WSProxy({
+  target: argv.target,
+  proxy: {
+    port: argv.port, 
+    host: argv.host
+  }
+});
+
+w.start();
+
