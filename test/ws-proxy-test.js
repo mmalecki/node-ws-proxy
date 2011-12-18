@@ -10,10 +10,7 @@ test("ws-proxy", function (t) {
     serverSocket.on('message', function (msg) {
       t.equal(msg, 'hello world', 'message should be equal to message sent');
 
-      server.close();
-      proxy.close();
-
-      t.end();
+      serverSocket.send('hello there!');
     });
   });
 
@@ -22,6 +19,15 @@ test("ws-proxy", function (t) {
 
     socket.on('open', function () {
       socket.send('hello world');
+    });
+
+    socket.on('message', function (msg) {
+      t.equal(msg, 'hello there!');
+
+      server.close();
+      proxy.close();
+
+      t.end();
     });
   });
 });
