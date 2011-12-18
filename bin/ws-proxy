@@ -2,11 +2,11 @@
 
 var colors = require('colors'),
     argv = require('optimist').argv,
-    WSProxy = require('../lib/ws-proxy').WSProxy;
+    wsProxy = require('../');
 
 console.log('ws-proxy'.rainbow + ' starting...'.green);
 
-var w = new WSProxy(argv.target);
+var w = wsProxy.createServer(argv.target);
 w.listen(argv.port, argv.host, function () {
   console.log('ws-proxy'.rainbow + ' listening on ' + argv.port.toString().grey);
 });
