@@ -17,7 +17,8 @@
   "dependencies": {
     "ws": "0.3.x",
     "optimist": "0.3.x",
-    "eventemitter2": "0.4.x"
+    "eventemitter2": "0.4.x",
+    "colors": "0.6.x"
   },
   "devDependencies": {}
 }
